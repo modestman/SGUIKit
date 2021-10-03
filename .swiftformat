@@ -1,0 +1,23 @@
+--swiftversion 5.3
+
+# File options
+--exclude Pods,Mnemo-Foundation/Generated
+
+# Rules
+--disable blankLinesAtStartOfScope, blankLinesAtEndOfScope, trailingSpace, unusedArguments, wrapMultilineStatementBraces
+--enable isEmpty
+--header strip
+
+# Options
+--commas inline
+--patternlet inline
+--closingparen balanced
+--wrapparameters before-first
+--wraparguments before-first
+--maxwidth 120
+--nospaceoperators ..., ..<
+--decimalgrouping 3,5
+--wrapcollections before-first
+--indent 4
+--ifdef no-indent
+--trimwhitespace nonblank-lines

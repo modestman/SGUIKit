@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "InputMask",
+        "repositoryURL": "https://github.com/RedMadRobot/input-mask-ios",
+        "state": {
+          "branch": null,
+          "revision": "40e33ad9fb8cef671f8c4f667f6c0a0043abcbb3",
+          "version": "6.1.0"
+        }
+      },
+      {
+        "package": "RxSwift",
+        "repositoryURL": "https://github.com/ReactiveX/RxSwift.git",
+        "state": {
+          "branch": null,
+          "revision": "7c17a6ccca06b5c107cfa4284e634562ddaf5951",
+          "version": "6.2.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
