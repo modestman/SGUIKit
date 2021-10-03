@@ -1,5 +1,4 @@
 import Foundation
-import SGCommonHelpers
 
 public typealias TextValidationClosure = (String?) -> ValidationResult
 

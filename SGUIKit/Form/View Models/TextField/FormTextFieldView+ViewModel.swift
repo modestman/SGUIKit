@@ -1,6 +1,5 @@
 import RxCocoa
 import RxSwift
-import SGCommonHelpers
 import UIKit
 
 /// Протокол вью-модели для конфигурирования текстового поля ввода

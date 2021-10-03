@@ -1,6 +1,5 @@
 import RxCocoa
 import RxSwift
-import SGCommonHelpers
 
 /// Вью-модель для ввода целых чисел с группировкой по разрядам (1 000 000)
 public class FormTextFieldGroupedNumberViewModel: BaseFormTextFieldViewModel<Int?> {

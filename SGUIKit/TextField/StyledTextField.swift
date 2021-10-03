@@ -1,4 +1,3 @@
-import SGCommonHelpers
 import UIKit
 
 /// Текст-филд со вспылвающим заголовком
@@ -176,54 +175,4 @@ extension StyledTextField: TextBoxDelegate {
         updateAppearance()
     }
     
-}
-
-public extension StyledTextField {
-    
-    /// Добавить справа иконку поиска и кнопку очистки поля
-    func configureSearchAndClearButton() {
-        let clearButton = UIButton(type: .custom)
-        let clearImg = UIImage(named: "icClear", in: .current, compatibleWith: nil)
-        clearButton.setImage(clearImg, for: .normal)
-        clearButton.addTarget(self, action: #selector(clear), for: .touchUpInside)
-        setRigthView(clearButton, for: .text)
-        setRigthView(clearButton, for: .textInput)
-        
-        let searchButton = UIButton(type: .custom)
-        let lensImg = UIImage(named: "icSearchLens", in: .current, compatibleWith: nil)
-        searchButton.setImage(lensImg, for: .disabled)
-        searchButton.isEnabled = false
-        setRigthView(searchButton, for: .empty)
-        setRigthView(searchButton, for: .placeholder)
-    }
-    
-    /// Добавить кнопку скрытия/показа символов пароля
-    func configureSecureTextEntryButton() {
-        let showPasswordButton = UIButton(type: .custom)
-        let btnImage = UIImage(
-            named: isSecureTextEntry ? "icLoginVisibilityOff" : "icLoginVisibility",
-            in: .current,
-            compatibleWith: nil
-        )
-        showPasswordButton.setImage(btnImage, for: .normal)
-        showPasswordButton.addTarget(self, action: #selector(updateSecureTextEntryButton), for: .touchUpInside)
-        setRigthView(showPasswordButton, for: .text)
-        setRigthView(showPasswordButton, for: .textInput)
-        setRigthView(showPasswordButton, for: .empty)
-        setRigthView(showPasswordButton, for: .placeholder)
-    }
-    
-    @objc private func updateSecureTextEntryButton(_ button: UIButton) {
-        let firstResponder = isFirstResponder
-        if firstResponder { _ = resignFirstResponder() }
-        isSecureTextEntry.toggle()
-        if firstResponder { _ = becomeFirstResponder() }
-        
-        let btnImage = UIImage(
-            named: isSecureTextEntry ? "icLoginVisibilityOff" : "icLoginVisibility",
-            in: .current,
-            compatibleWith: nil
-        )
-        button.setImage(btnImage, for: .normal)
-    }
 }

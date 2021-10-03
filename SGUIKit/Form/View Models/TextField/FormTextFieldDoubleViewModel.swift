@@ -1,7 +1,6 @@
 import Foundation
 import RxCocoa
 import RxSwift
-import SGCommonHelpers
 
 /// Вью-модель для ввода вещественных чисел
 public class FormTextFieldDoubleViewModel: BaseFormTextFieldViewModel<Double?> {

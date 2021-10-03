@@ -1,6 +1,5 @@
 import RxCocoa
 import RxSwift
-import SGCommonHelpers
 import UIKit
 
 /// Вьюха с многострочным полем ввода (комментарий)
@@ -28,7 +27,7 @@ public final class FormTextView: UIView {
     
     public private(set) var titleLabel = LabelSR14()
     public private(set) var textView = UITextView()
-    public var valueChangedAction: StringClosure?
+    public var valueChangedAction: ((String) -> Void)?
     
     // MARK: - Fabric method
     

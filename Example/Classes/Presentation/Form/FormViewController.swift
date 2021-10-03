@@ -1,6 +1,5 @@
 import RxCocoa
 import RxSwift
-import SGCommonHelpers
 import SGUIKit
 import UIKit
 
@@ -50,6 +49,18 @@ class FormViewController: UIViewController {
         let header = FormSectionHeaderView.make(with: "Заголовок секции")
         stackView.addArrangedSubview(header)
         
+        nameVM = .init(
+            title: "Имя",
+            value: .init(value: viewModel.cardholder),
+            keyboardType: .asciiCapable,
+            autocapitalizationType: .allCharacters,
+            validationModel: .cardholder
+        )
+        nameVM.value.bind(onNext: { [unowned self] in self.viewModel.cardholder = $0 }).disposed(by: disposeBag)
+        let textField1 = FormTextFieldView.make(with: nameVM)
+        textField1.helpText = "Введите имя держателя карты"
+        stackView.addArrangedSubview(textField1)
+        
         strVM = .init(title: "Ввод текстового значения", value: .init(value: viewModel.name), validationModel: nil)
         strVM.value.bind(onNext: { [unowned self] in
             self.viewModel.name = $0
@@ -57,17 +68,6 @@ class FormViewController: UIViewController {
         let textField0 = FormTextFieldView.make(with: strVM)
         textField0.helpText = "Подсказка"
         stackView.addArrangedSubview(textField0)
-        
-        nameVM = .init(
-            title: "Имя на карте",
-            value: .init(value: viewModel.cardholder),
-            keyboardType: .asciiCapable,
-            autocapitalizationType: .allCharacters,
-            validationModel: .cardholder
-        )
-        strVM.value.bind(onNext: { [unowned self] in self.viewModel.cardholder = $0 }).disposed(by: disposeBag)
-        let textField1 = FormTextFieldView.make(with: nameVM)
-        stackView.addArrangedSubview(textField1)
         
         intVM = .init(title: "Целое число", value: .init(value: viewModel.intNumber), validationClosure: nil)
         intVM.value.bind(onNext: { [unowned self] in self.viewModel.intNumber = $0 }).disposed(by: disposeBag)
@@ -131,16 +131,4 @@ extension NumberFormatter {
         formatter.roundingMode = .down
         return formatter
     }
-    
-}
-
-extension DateFormatter {
-    
-    static let mscDayMonthFullYearFormatter: DateFormatter = {
-        let dateFormatter = DateFormatter()
-        dateFormatter.locale = Locale(identifier: "ru_RU")
-        dateFormatter.timeZone = TimeZone(identifier: "Europe/Moscow")
-        dateFormatter.dateFormat = "dd.MM.yyyy"
-        return dateFormatter
-    }()
 }

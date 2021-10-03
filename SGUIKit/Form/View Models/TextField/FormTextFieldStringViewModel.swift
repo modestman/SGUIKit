@@ -1,6 +1,5 @@
 import RxCocoa
 import RxSwift
-import SGCommonHelpers
 import UIKit
 
 ///  Вью-модель для ввода текста

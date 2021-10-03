@@ -10,43 +10,18 @@ import Foundation
 
 public extension String {
 
-    func substring(from: Int) -> String {
-        let fromIndex = index(from: from)
-        return String(self[fromIndex...])
-    }
-
     func substring(to: Int) -> String {
         let toIndex = index(from: to)
         return String(self[..<toIndex])
-    }
-
-    func substring(with range: Range<Int>) -> String {
-        let startIndex = index(from: range.lowerBound)
-        let endIndex = index(from: range.upperBound)
-        return String(self[startIndex..<endIndex])
     }
 
     private func index(from: Int) -> Index {
         index(startIndex, offsetBy: from)
     }
 
-}
-
-// MARK: - Вычисляемые поля
-
-public extension String {
-
     var withoutWhitespaces: String {
         replacingOccurrences(of: " ", with: "")
     }
-
-    var capitalizedFirstLetter: String {
-        guard !isEmpty else { return self }
-        return prefix(1).capitalized + dropFirst()
-    }
-}
-
-public extension String {
 
     /// Проверка строки на регулярное выражение
     ///
@@ -69,9 +44,6 @@ public extension String {
 
         return range.length > 0
     }
-}
-
-public extension String {
 
     func newString(replacementRange range: NSRange, replacementString: String) -> String {
         if range.length > 0, replacementString.isEmpty {
@@ -109,49 +81,6 @@ public extension String {
         }
     }
 
-}
-
-public extension String {
-
-    /**
-     Склоняет для числительных слова.
-     Пример использования:
-     String.declensionForNumber(2, ["день", "дня", "дней"]) // return @"дня"
-     
-     - parameter number: число для которого будет подбираться склонение
-     - parameter titles: массив 3х вариантов просклоненных слов, напр.:
-     ["именительный", "родительный", "множественное число"]
-     */
-    static func declensionForNumber(_ number: Int, titles: [String]) -> String {
-        if titles.count != 3 {
-            return "Необходим массив из 3х вариантов просклоненных слов"
-        }
-
-        let cases = [2, 0, 1, 1, 1, 2]
-        if number % 100 > 4, number % 100 < 20 {
-            return titles[2]
-        } else {
-            return titles[cases[(number % 10 < 5) ? number % 10 : 5]]
-        }
-    }
-
-}
-
-public extension String {
-    func validate(with regex: String) -> Bool {
-        guard
-            let regex = try? NSRegularExpression(
-                pattern: regex,
-                options: [.anchorsMatchLines]
-            ) else { return false }
-        
-        let numberOfMatches = regex.numberOfMatches(
-            in: self,
-            options: [],
-            range: NSRange(startIndex..., in: self)
-        )
-        return numberOfMatches > 0
-    }
 }
 
 public extension Optional where Wrapped == String {

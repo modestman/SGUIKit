@@ -1,4 +1,3 @@
-import SGCommonHelpers
 import UIKit
 
 /// TextField который запрещает ввод невалидных символов и проверяет значение по окончании ввода.

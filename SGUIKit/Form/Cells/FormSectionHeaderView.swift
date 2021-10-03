@@ -1,4 +1,3 @@
-import SGCommonHelpers
 import UIKit
 
 /// Вьюха с заголовком секции

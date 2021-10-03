@@ -26,7 +26,6 @@ public class GroupedNumberTextFieldFormatter: NSObject {
             caretPosition = selfType.makeCompleteCaretPosition(
                 text: textField.text ?? "",
                 formattedText: formattedText,
-                string: string,
                 initialCaretPosition: textField.caretPosition,
                 range: range
             )
@@ -116,7 +115,6 @@ public class GroupedNumberTextFieldFormatter: NSObject {
     private static func makeCompleteCaretPosition(
         text: String,
         formattedText: String,
-        string: String,
         initialCaretPosition: Int,
         range: NSRange
     ) -> Int {

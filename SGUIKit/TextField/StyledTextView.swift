@@ -1,4 +1,3 @@
-import SGCommonHelpers
 import UIKit
 
 /// Текст-вью со вспылвающим заголовком

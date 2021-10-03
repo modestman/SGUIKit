@@ -3,7 +3,6 @@ import UIKit
 public enum FontNames {
     public static let sr = "Stem-Regular"
     public static let sm = "Stem-Medium"
-    public static let sl = "Stem-Light"
     
     static var fileNames: [String] = ["STM45", "STM55", "STM65"]
 }
@@ -37,19 +36,7 @@ public extension UIFont {
         UIFont(name: FontNames.sr, size: 12)!
     }
 
-    class var sm20: UIFont {
-        UIFont(name: FontNames.sm, size: 20)!
-    }
-    
-    class var sm16: UIFont {
-        UIFont(name: FontNames.sm, size: 16)!
-    }
-
     class var sm14: UIFont {
         UIFont(name: FontNames.sm, size: 14)!
-    }
-    
-    class var sm12: UIFont {
-        UIFont(name: FontNames.sm, size: 12)!
     }
 }

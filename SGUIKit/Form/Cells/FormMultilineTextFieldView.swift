@@ -1,6 +1,5 @@
 import RxCocoa
 import RxSwift
-import SGCommonHelpers
 import UIKit
 
 /// Вьюха с многострочным полем ввода (адрес)
@@ -8,7 +7,6 @@ public final class FormMultilineTextFieldView: UIView {
     
     private enum Constants {
         static let insets = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 0)
-        static let minHeight: CGFloat = 88
     }
     
     // MARK: - Private properties
@@ -19,7 +17,7 @@ public final class FormMultilineTextFieldView: UIView {
     // MARK: - Public properties
     
     public private(set) var textView = StyledTextView()
-    public var valueChangedAction: StringClosure?
+    public var valueChangedAction: ((String) -> Void)?
     
     // MARK: - Fabric method
     
@@ -81,14 +79,5 @@ extension FormMultilineTextFieldView: UITextViewDelegate {
         guard case .limit(let count) = charactersLimit else { return true }
         let newText = (textView.text as NSString).replacingCharacters(in: range, with: text)
         return newText.count <= count
-    }
-}
-
-// MARK: - Rx
-
-public extension Reactive where Base: FormMultilineTextFieldView {
-    
-    var text: Observable<String?> {
-        base.textView.rx.text.asObservable()
     }
 }

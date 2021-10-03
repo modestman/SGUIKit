@@ -1,7 +1,6 @@
 import Foundation
 import RxCocoa
 import RxSwift
-import SGCommonHelpers
 
 /// Вью-модель для ввода года
 public final class FormTextFieldYearViewModel: FormTextFieldIntViewModel {

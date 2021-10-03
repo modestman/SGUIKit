@@ -1,6 +1,5 @@
 import RxCocoa
 import RxSwift
-import SGCommonHelpers
 import UIKit
 
 /// Вьюха с однострочным полем ввода и валидацией значения
@@ -18,7 +17,7 @@ public final class FormTextFieldView: UIView {
     // MARK: - Public properties
     
     public private(set) var textField = ValidationTextField()
-    public var valueChangedAction: OptionalStringClosure?
+    public var valueChangedAction: ((String?) -> Void)?
     public var helpText: String? {
         set {
             textField.helpText = newValue
@@ -83,13 +82,4 @@ public final class FormTextFieldView: UIView {
         textField.cleanText.subscribe(onNext: valueChangedAction).disposed(by: disposeBag)
     }
     
-}
-
-// MARK: - Rx
-
-public extension Reactive where Base: FormTextFieldView {
-    
-    var text: Observable<String?> {
-        base.textField.cleanText.asObservable()
-    }
 }

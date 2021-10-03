@@ -1,6 +1,5 @@
 import RxCocoa
 import RxSwift
-import SGCommonHelpers
 
 /// Вью-модель для ввода номера телефона
 public final class FormTextFieldPhoneViewModel: FormTextFieldStringViewModel {

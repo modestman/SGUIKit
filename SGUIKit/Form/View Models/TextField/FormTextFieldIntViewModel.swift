@@ -1,6 +1,5 @@
 import RxCocoa
 import RxSwift
-import SGCommonHelpers
 
 /// Вью-модель для ввода целых чисел
 public class FormTextFieldIntViewModel: BaseFormTextFieldViewModel<Int?> {
