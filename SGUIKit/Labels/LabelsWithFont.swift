@@ -41,9 +41,3 @@ public final class LabelSR12: RMRLabel {
         .sr12
     }
 }
-
-public final class LabelNL16: RMRLabel {
-    override public class var rmrFont: UIFont {
-        .nl16
-    }
-}

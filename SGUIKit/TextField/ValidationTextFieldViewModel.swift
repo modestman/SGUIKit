@@ -1,6 +1,8 @@
 import Foundation
 import SGCommonHelpers
 
+public typealias TextValidationClosure = (String?) -> ValidationResult
+
 /// Модель для настройки ValidationTextField
 public struct ValidationTextFieldViewModel {
     
@@ -85,4 +87,10 @@ public extension ValidationTextFieldViewModel {
             validator: .closure { ValidationResult(($0 ?? "").count >= min && ($0 ?? "").count <= max) }
         )
     }
+    
+    /// Проверка имени на крте
+    static let cardholder = ValidationTextFieldViewModel(
+        pattern: CommonValidationPatterns.cardholderInputPattern,
+        validator: .regexp(CommonValidationPatterns.cardholderValidationRegexp)
+    )
 }

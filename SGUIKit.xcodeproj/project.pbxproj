@@ -9,13 +9,10 @@
 /* Begin PBXBuildFile section */
 		026146052709C89F008F1BBD /* SGUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 026146032709C89F008F1BBD /* SGUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		026146572709C8AB008F1BBD /* FormSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0261460C2709C8AA008F1BBD /* FormSectionHeaderView.swift */; };
-		026146582709C8AB008F1BBD /* FormButtonCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0261460D2709C8AA008F1BBD /* FormButtonCellView.swift */; };
 		026146592709C8AB008F1BBD /* FormTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0261460E2709C8AA008F1BBD /* FormTextFieldView.swift */; };
 		0261465A2709C8AB008F1BBD /* ViewWithSeparator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0261460F2709C8AA008F1BBD /* ViewWithSeparator.swift */; };
-		0261465B2709C8AB008F1BBD /* FormSwitchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026146102709C8AA008F1BBD /* FormSwitchView.swift */; };
 		0261465C2709C8AB008F1BBD /* FormTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026146112709C8AA008F1BBD /* FormTextView.swift */; };
 		0261465D2709C8AB008F1BBD /* FormSpacerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026146122709C8AA008F1BBD /* FormSpacerView.swift */; };
-		0261465E2709C8AB008F1BBD /* FormDatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026146132709C8AA008F1BBD /* FormDatePickerView.swift */; };
 		0261465F2709C8AB008F1BBD /* FormMultilineTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026146142709C8AA008F1BBD /* FormMultilineTextFieldView.swift */; };
 		026146602709C8AB008F1BBD /* FormTextFieldPhoneViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026146172709C8AA008F1BBD /* FormTextFieldPhoneViewModel.swift */; };
 		026146612709C8AB008F1BBD /* FormTextFieldIntViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026146182709C8AA008F1BBD /* FormTextFieldIntViewModel.swift */; };
@@ -24,10 +21,7 @@
 		026146642709C8AB008F1BBD /* FormTextFieldDoubleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0261461B2709C8AA008F1BBD /* FormTextFieldDoubleViewModel.swift */; };
 		026146652709C8AB008F1BBD /* FormTextFieldView+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0261461C2709C8AA008F1BBD /* FormTextFieldView+ViewModel.swift */; };
 		026146662709C8AB008F1BBD /* FormTextFieldStringViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0261461D2709C8AA008F1BBD /* FormTextFieldStringViewModel.swift */; };
-		026146672709C8AB008F1BBD /* FormButtonCellView+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0261461E2709C8AA008F1BBD /* FormButtonCellView+ViewModel.swift */; };
 		026146682709C8AB008F1BBD /* FormTextView+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0261461F2709C8AA008F1BBD /* FormTextView+ViewModel.swift */; };
-		026146692709C8AB008F1BBD /* FormDatePickerView+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026146202709C8AA008F1BBD /* FormDatePickerView+ViewModel.swift */; };
-		0261466A2709C8AB008F1BBD /* FormSwitchView+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026146212709C8AA008F1BBD /* FormSwitchView+ViewModel.swift */; };
 		0261466B2709C8AB008F1BBD /* FormMultilineTextFieldView+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026146222709C8AA008F1BBD /* FormMultilineTextFieldView+ViewModel.swift */; };
 		0261466F2709C8AB008F1BBD /* OrangeRoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026146282709C8AA008F1BBD /* OrangeRoundedButton.swift */; };
 		026146702709C8AB008F1BBD /* InvisibleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026146292709C8AA008F1BBD /* InvisibleButton.swift */; };
@@ -36,7 +30,6 @@
 		026146762709C8AB008F1BBD /* STM55.otf in Resources */ = {isa = PBXBuildFile; fileRef = 026146312709C8AA008F1BBD /* STM55.otf */; };
 		026146772709C8AB008F1BBD /* STM45.otf in Resources */ = {isa = PBXBuildFile; fileRef = 026146322709C8AA008F1BBD /* STM45.otf */; };
 		026146782709C8AB008F1BBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 026146332709C8AA008F1BBD /* Assets.xcassets */; };
-		026146792709C8AB008F1BBD /* nittiL.otf in Resources */ = {isa = PBXBuildFile; fileRef = 026146342709C8AA008F1BBD /* nittiL.otf */; };
 		0261467A2709C8AB008F1BBD /* STM65.otf in Resources */ = {isa = PBXBuildFile; fileRef = 026146352709C8AA008F1BBD /* STM65.otf */; };
 		0261467B2709C8AB008F1BBD /* RMRLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026146372709C8AA008F1BBD /* RMRLabel.swift */; };
 		0261467C2709C8AB008F1BBD /* LabelsWithFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026146382709C8AA008F1BBD /* LabelsWithFont.swift */; };
@@ -137,13 +130,10 @@
 		026146032709C89F008F1BBD /* SGUIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGUIKit.h; sourceTree = "<group>"; };
 		026146042709C89F008F1BBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0261460C2709C8AA008F1BBD /* FormSectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormSectionHeaderView.swift; sourceTree = "<group>"; };
-		0261460D2709C8AA008F1BBD /* FormButtonCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormButtonCellView.swift; sourceTree = "<group>"; };
 		0261460E2709C8AA008F1BBD /* FormTextFieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormTextFieldView.swift; sourceTree = "<group>"; };
 		0261460F2709C8AA008F1BBD /* ViewWithSeparator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewWithSeparator.swift; sourceTree = "<group>"; };
-		026146102709C8AA008F1BBD /* FormSwitchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormSwitchView.swift; sourceTree = "<group>"; };
 		026146112709C8AA008F1BBD /* FormTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormTextView.swift; sourceTree = "<group>"; };
 		026146122709C8AA008F1BBD /* FormSpacerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormSpacerView.swift; sourceTree = "<group>"; };
-		026146132709C8AA008F1BBD /* FormDatePickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormDatePickerView.swift; sourceTree = "<group>"; };
 		026146142709C8AA008F1BBD /* FormMultilineTextFieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormMultilineTextFieldView.swift; sourceTree = "<group>"; };
 		026146172709C8AA008F1BBD /* FormTextFieldPhoneViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormTextFieldPhoneViewModel.swift; sourceTree = "<group>"; };
 		026146182709C8AA008F1BBD /* FormTextFieldIntViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormTextFieldIntViewModel.swift; sourceTree = "<group>"; };
@@ -152,10 +142,7 @@
 		0261461B2709C8AA008F1BBD /* FormTextFieldDoubleViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormTextFieldDoubleViewModel.swift; sourceTree = "<group>"; };
 		0261461C2709C8AA008F1BBD /* FormTextFieldView+ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FormTextFieldView+ViewModel.swift"; sourceTree = "<group>"; };
 		0261461D2709C8AA008F1BBD /* FormTextFieldStringViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormTextFieldStringViewModel.swift; sourceTree = "<group>"; };
-		0261461E2709C8AA008F1BBD /* FormButtonCellView+ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FormButtonCellView+ViewModel.swift"; sourceTree = "<group>"; };
 		0261461F2709C8AA008F1BBD /* FormTextView+ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FormTextView+ViewModel.swift"; sourceTree = "<group>"; };
-		026146202709C8AA008F1BBD /* FormDatePickerView+ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FormDatePickerView+ViewModel.swift"; sourceTree = "<group>"; };
-		026146212709C8AA008F1BBD /* FormSwitchView+ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FormSwitchView+ViewModel.swift"; sourceTree = "<group>"; };
 		026146222709C8AA008F1BBD /* FormMultilineTextFieldView+ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FormMultilineTextFieldView+ViewModel.swift"; sourceTree = "<group>"; };
 		026146282709C8AA008F1BBD /* OrangeRoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrangeRoundedButton.swift; sourceTree = "<group>"; };
 		026146292709C8AA008F1BBD /* InvisibleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvisibleButton.swift; sourceTree = "<group>"; };
@@ -164,7 +151,6 @@
 		026146312709C8AA008F1BBD /* STM55.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = STM55.otf; sourceTree = "<group>"; };
 		026146322709C8AA008F1BBD /* STM45.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = STM45.otf; sourceTree = "<group>"; };
 		026146332709C8AA008F1BBD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		026146342709C8AA008F1BBD /* nittiL.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = nittiL.otf; sourceTree = "<group>"; };
 		026146352709C8AA008F1BBD /* STM65.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = STM65.otf; sourceTree = "<group>"; };
 		026146372709C8AA008F1BBD /* RMRLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMRLabel.swift; sourceTree = "<group>"; };
 		026146382709C8AA008F1BBD /* LabelsWithFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelsWithFont.swift; sourceTree = "<group>"; };
@@ -301,13 +287,10 @@
 			isa = PBXGroup;
 			children = (
 				0261460C2709C8AA008F1BBD /* FormSectionHeaderView.swift */,
-				0261460D2709C8AA008F1BBD /* FormButtonCellView.swift */,
 				0261460E2709C8AA008F1BBD /* FormTextFieldView.swift */,
 				0261460F2709C8AA008F1BBD /* ViewWithSeparator.swift */,
-				026146102709C8AA008F1BBD /* FormSwitchView.swift */,
 				026146112709C8AA008F1BBD /* FormTextView.swift */,
 				026146122709C8AA008F1BBD /* FormSpacerView.swift */,
-				026146132709C8AA008F1BBD /* FormDatePickerView.swift */,
 				026146142709C8AA008F1BBD /* FormMultilineTextFieldView.swift */,
 			);
 			path = Cells;
@@ -317,10 +300,7 @@
 			isa = PBXGroup;
 			children = (
 				026146162709C8AA008F1BBD /* TextField */,
-				0261461E2709C8AA008F1BBD /* FormButtonCellView+ViewModel.swift */,
 				0261461F2709C8AA008F1BBD /* FormTextView+ViewModel.swift */,
-				026146202709C8AA008F1BBD /* FormDatePickerView+ViewModel.swift */,
-				026146212709C8AA008F1BBD /* FormSwitchView+ViewModel.swift */,
 				026146222709C8AA008F1BBD /* FormMultilineTextFieldView+ViewModel.swift */,
 			);
 			path = "View Models";
@@ -357,7 +337,6 @@
 				026146312709C8AA008F1BBD /* STM55.otf */,
 				026146322709C8AA008F1BBD /* STM45.otf */,
 				026146332709C8AA008F1BBD /* Assets.xcassets */,
-				026146342709C8AA008F1BBD /* nittiL.otf */,
 				026146352709C8AA008F1BBD /* STM65.otf */,
 			);
 			path = Resources;
@@ -652,7 +631,6 @@
 				026146772709C8AB008F1BBD /* STM45.otf in Resources */,
 				0261467A2709C8AB008F1BBD /* STM65.otf in Resources */,
 				026146782709C8AB008F1BBD /* Assets.xcassets in Resources */,
-				026146792709C8AB008F1BBD /* nittiL.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -693,7 +671,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftformat >/dev/null; then\n  swiftformat .\nfi\n\nif which swiftlint >/dev/null; then\n  swiftlint --fix\nfi\n";
+			shellScript = "if which swiftformat >/dev/null; then\n  swiftformat ..\nfi\n\nif which swiftlint >/dev/null; then\n  swiftlint --fix\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -702,14 +680,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				026146672709C8AB008F1BBD /* FormButtonCellView+ViewModel.swift in Sources */,
 				026146702709C8AB008F1BBD /* InvisibleButton.swift in Sources */,
 				026146612709C8AB008F1BBD /* FormTextFieldIntViewModel.swift in Sources */,
 				026147242709D3E8008F1BBD /* KeyboardUpdate.swift in Sources */,
 				026146662709C8AB008F1BBD /* FormTextFieldStringViewModel.swift in Sources */,
 				0261466B2709C8AB008F1BBD /* FormMultilineTextFieldView+ViewModel.swift in Sources */,
 				026146822709C8AB008F1BBD /* TextView.swift in Sources */,
-				026146582709C8AB008F1BBD /* FormButtonCellView.swift in Sources */,
 				0261465C2709C8AB008F1BBD /* FormTextView.swift in Sources */,
 				026147252709D3E8008F1BBD /* KeyboardObservable.swift in Sources */,
 				026146892709C8AB008F1BBD /* Fonts.swift in Sources */,
@@ -720,7 +696,6 @@
 				026146902709C8AB008F1BBD /* Bundle+Ext.swift in Sources */,
 				026146622709C8AB008F1BBD /* FormTextFieldGroupedNumberViewModel.swift in Sources */,
 				0261468B2709C8AB008F1BBD /* Colors.swift in Sources */,
-				0261465B2709C8AB008F1BBD /* FormSwitchView.swift in Sources */,
 				0261467F2709C8AB008F1BBD /* TextBox.swift in Sources */,
 				026146812709C8AB008F1BBD /* TextField.swift in Sources */,
 				0261465D2709C8AB008F1BBD /* FormSpacerView.swift in Sources */,
@@ -736,10 +711,7 @@
 				026146912709C8AB008F1BBD /* GroupedNumberTextFieldFormatter.swift in Sources */,
 				026146932709C8AB008F1BBD /* Validatable.swift in Sources */,
 				0261465A2709C8AB008F1BBD /* ViewWithSeparator.swift in Sources */,
-				0261466A2709C8AB008F1BBD /* FormSwitchView+ViewModel.swift in Sources */,
 				026146862709C8AB008F1BBD /* ValidationTextField.swift in Sources */,
-				026146692709C8AB008F1BBD /* FormDatePickerView+ViewModel.swift in Sources */,
-				0261465E2709C8AB008F1BBD /* FormDatePickerView.swift in Sources */,
 				026146872709C8AB008F1BBD /* TextInputCharactersLimit.swift in Sources */,
 				0261465F2709C8AB008F1BBD /* FormMultilineTextFieldView.swift in Sources */,
 				026146712709C8AB008F1BBD /* TransparentBlackButton.swift in Sources */,

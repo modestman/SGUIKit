@@ -4,9 +4,8 @@ public enum FontNames {
     public static let sr = "Stem-Regular"
     public static let sm = "Stem-Medium"
     public static let sl = "Stem-Light"
-    public static let nl = "NittiWM2-Light"
     
-    static var fileNames: [String] = ["STM45", "STM55", "STM65", "nittiL"]
+    static var fileNames: [String] = ["STM45", "STM55", "STM65"]
 }
 
 public extension UIFont {
@@ -53,9 +52,4 @@ public extension UIFont {
     class var sm12: UIFont {
         UIFont(name: FontNames.sm, size: 12)!
     }
-
-    class var nl16: UIFont {
-        UIFont(name: FontNames.nl, size: 16)!
-    }
-
 }

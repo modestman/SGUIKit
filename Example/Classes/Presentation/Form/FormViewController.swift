@@ -7,13 +7,14 @@ import UIKit
 struct FormViewModel {
     var isDirty = false
     var name: String?
+    var cardholder: String? = "IVAN PETROV"
     var intNumber: Int?
     var mileage: Int? = 45_000
     var doubleNumber: Double? = 19.95
     var phone: String?
     var year: Int? = 2004
-    var comment: String? = "Some\ncomment\n1\n2\n3\n4\n5\n6"
-    var address: String? = "Москва, Большой Кисловский пер. д. 10, стр. 2, кв. 76"
+    var comment: String? = "Some comment\nline 2\nline 3"
+    var address: String? = "125130, Москва, Большой Кисловский пер.\nд. 10, стр. 2, кв. 76"
 }
 
 class FormViewController: UIViewController {
@@ -24,9 +25,8 @@ class FormViewController: UIViewController {
     private lazy var keyboardObservable: KeyboardObservable = KeyboardObservableImpl(presenter: self)
     private var viewModel = FormViewModel()
     
-    private var switchVM: FormSwitchView.ViewModel!
-    private var switch2VM: FormSwitchView.ViewModel!
     private var strVM: FormTextFieldStringViewModel!
+    private var nameVM: FormTextFieldStringViewModel!
     private var intVM: FormTextFieldIntViewModel!
     private var mileageVM: FormTextFieldGroupedNumberViewModel!
     private var doubleVM: FormTextFieldDoubleViewModel!
@@ -34,61 +34,21 @@ class FormViewController: UIViewController {
     private var yearVM: FormTextFieldYearViewModel!
     private var addressVM: FormMultilineTextFieldView.ViewModel!
     private var commentVM: FormTextView.ViewModel!
-    private var comment2VM: FormTextView.ViewModel!
-        
-    private weak var groupingDelegate: GroupedNumberTextFieldFormatter?
+    
+    private var groupingDelegate: GroupedNumberTextFieldFormatter?
     
     private var disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        keyboardObservable.bindKeyboardFrame(to: scrollView) { -self.view.safeAreaInsets.bottom }
+        keyboardObservable.bindKeyboardFrame(to: scrollView) { .zero }
+        keyboardObservable.setupCloseKeyboardGesture()
     }
     
     private func setupUI() {
         let header = FormSectionHeaderView.make(with: "Заголовок секции")
         stackView.addArrangedSubview(header)
-        
-        switchVM = .init(title: "Переключатель", value: .init(value: viewModel.isDirty))
-        switchVM.value.bind(onNext: { [unowned self] in self.viewModel.isDirty = $0 }).disposed(by: disposeBag)
-        let switchView = FormSwitchView.make(with: switchVM)
-        stackView.addArrangedSubview(switchView)
-        
-        let vm = FormButtonCellView.ViewModel(
-            title: "Кнопка",
-            value: "Выберите значение",
-            isEnabled: true,
-            tapAction: nil
-        )
-        let button = FormButtonCellView.make(with: vm)
-        stackView.addArrangedSubview(button)
-        
-        let vm1 = FormButtonCellView.ViewModel(
-            title: "Кнопка c disclosure индикатором",
-            value: "Выберите значение",
-            isEnabled: true,
-            shouldShowDisclosureIndicator: true,
-            tapAction: nil
-        )
-        let button1 = FormButtonCellView.make(with: vm1)
-        stackView.addArrangedSubview(button1)
-        
-        let dateVm = FormDatePickerView.ViewModel(
-            title: "Дата",
-            value: .init(value: nil),
-            minDate: Date().addingTimeInterval(-864_000),
-            maxDate: Date().addingTimeInterval(864_000),
-            dateFormatter: .mscDayMonthFullYearFormatter,
-            shouldUpdateWhileScrolling: true,
-            validationClosure: {
-                guard let date = $0 else { return .invalid }
-                return date < Date() ? .valid : .failure(.init("Дата не должна быть в будущем"))
-            }
-        )
-        let datePicker = FormDatePickerView.make(with: dateVm)
-        datePicker.helpText = "Выберите дату ДТП"
-        stackView.addArrangedSubview(datePicker)
         
         strVM = .init(title: "Ввод текстового значения", value: .init(value: viewModel.name), validationModel: nil)
         strVM.value.bind(onNext: { [unowned self] in
@@ -98,13 +58,24 @@ class FormViewController: UIViewController {
         textField0.helpText = "Подсказка"
         stackView.addArrangedSubview(textField0)
         
-        intVM = .init(title: "Целое число", value: .init(value: viewModel.intNumber), validationModel: nil)
+        nameVM = .init(
+            title: "Имя на карте",
+            value: .init(value: viewModel.cardholder),
+            keyboardType: .asciiCapable,
+            autocapitalizationType: .allCharacters,
+            validationModel: .cardholder
+        )
+        strVM.value.bind(onNext: { [unowned self] in self.viewModel.cardholder = $0 }).disposed(by: disposeBag)
+        let textField1 = FormTextFieldView.make(with: nameVM)
+        stackView.addArrangedSubview(textField1)
+        
+        intVM = .init(title: "Целое число", value: .init(value: viewModel.intNumber), validationClosure: nil)
         intVM.value.bind(onNext: { [unowned self] in self.viewModel.intNumber = $0 }).disposed(by: disposeBag)
         let textField2 = FormTextFieldView.make(with: intVM)
         stackView.addArrangedSubview(textField2)
         
         mileageVM = .init(
-            title: "Пробег",
+            title: "Число с группировкой разрядов",
             value: .init(value: viewModel.mileage),
             validationModel: .mileage
         )
@@ -140,19 +111,12 @@ class FormViewController: UIViewController {
         stackView.addArrangedSubview(multilineTextField)
         
         commentVM = .init(
-            title: "Повреждения, не относящиеся к страховому случаю",
-            value: .init(value: viewModel.comment), charactersLimit: .limit(count: 50)
+            title: "Коментарий (не более 200 символов)",
+            value: .init(value: viewModel.comment), charactersLimit: .limit(count: 200)
         )
         commentVM.value.bind(onNext: { [unowned self] in self.viewModel.comment = $0 }).disposed(by: disposeBag)
         let textView = FormTextView.make(with: commentVM)
         stackView.addArrangedSubview(textView)
-        
-        comment2VM = .init(
-            title: "Коментарий (необязательно)",
-            value: .init(value: nil), charactersLimit: .limit(count: 200)
-        )
-        let textView2 = FormTextView.make(with: comment2VM)
-        stackView.addArrangedSubview(textView2)
     }
 
 }

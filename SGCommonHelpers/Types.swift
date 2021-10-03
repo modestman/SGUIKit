@@ -14,4 +14,3 @@ public typealias CGImageCompletion = (CGImage) -> Void
 public typealias ImageOptionalCompletion = (UIImage?) -> Void
 public typealias LocationClosure = (CLLocation?) -> Void
 public typealias NotificationCenterObservation = NSObjectProtocol
-public typealias TextValidationClosure = (String?) -> ValidationResult

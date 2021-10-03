@@ -4,6 +4,7 @@ analyzer_rules:
 disabled_rules:
   - trailing_whitespace # Lines should not have trailing whitespace.
   - force_unwrapping # Force unwrapping should be avoided.
+  - weak_delegate
 
 opt_in_rules:
   - closure_end_indentation # Closure end should have the same indentation as the line that started it.
