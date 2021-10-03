@@ -1,3 +1,3 @@
 # SGUIKit
 
-A description of this package.
+Пример UI компонентов для построения форм ввода данных в iOS приложении

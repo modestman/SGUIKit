@@ -24,17 +24,10 @@ let package = Package(
             dependencies: [
                 .product(name: "RxSwift", package: "RxSwift"),
                 .product(name: "RxCocoa", package: "RxSwift"),
-                .product(name: "InputMask", package: "InputMask"),
-                .target(name: "SGCommonHelpers")
+                .product(name: "InputMask", package: "InputMask")
             ], 
             path: "", 
             sources: ["SGUIKit"]
-        ),
-        .target(
-            name: "SGCommonHelpers",
-            dependencies: [], 
-            path: "", 
-            sources: ["SGCommonHelpers"]
         )
     ]
 )

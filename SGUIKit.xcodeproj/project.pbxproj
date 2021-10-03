@@ -12,7 +12,6 @@
 		022FD446270A2D9B003F83E5 /* LayoutGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026146A92709C90F008F1BBD /* LayoutGuide.swift */; };
 		022FD447270A2D9E003F83E5 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026146A32709C90F008F1BBD /* Strings.swift */; };
 		022FD449270A32C9003F83E5 /* Bundle+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022FD448270A32C9003F83E5 /* Bundle+Ext.swift */; };
-		026146052709C89F008F1BBD /* SGUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 026146032709C89F008F1BBD /* SGUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		026146572709C8AB008F1BBD /* FormSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0261460C2709C8AA008F1BBD /* FormSectionHeaderView.swift */; };
 		026146592709C8AB008F1BBD /* FormTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0261460E2709C8AA008F1BBD /* FormTextFieldView.swift */; };
 		0261465A2709C8AB008F1BBD /* ViewWithSeparator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0261460F2709C8AA008F1BBD /* ViewWithSeparator.swift */; };
@@ -92,7 +91,6 @@
 /* Begin PBXFileReference section */
 		022FD448270A32C9003F83E5 /* Bundle+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+Ext.swift"; sourceTree = "<group>"; };
 		026146012709C89F008F1BBD /* SGUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SGUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		026146032709C89F008F1BBD /* SGUIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGUIKit.h; sourceTree = "<group>"; };
 		026146042709C89F008F1BBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0261460C2709C8AA008F1BBD /* FormSectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormSectionHeaderView.swift; sourceTree = "<group>"; };
 		0261460E2709C8AA008F1BBD /* FormTextFieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormTextFieldView.swift; sourceTree = "<group>"; };
@@ -200,7 +198,6 @@
 				0261464B2709C8AB008F1BBD /* Colors.swift */,
 				0261464C2709C8AB008F1BBD /* Helper */,
 				026146552709C8AB008F1BBD /* Protocols */,
-				026146032709C89F008F1BBD /* SGUIKit.h */,
 				026146042709C89F008F1BBD /* Info.plist */,
 			);
 			path = SGUIKit;
@@ -397,7 +394,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				026146052709C89F008F1BBD /* SGUIKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
